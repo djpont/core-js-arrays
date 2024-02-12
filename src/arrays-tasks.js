@@ -20,8 +20,7 @@
  *    getIntervalArray(3, 3) => [ 3 ]
  */
 function getIntervalArray(start, end) {
-  const ret = Array.from({length: end - start + 1}, (_, i) => i + start);
-  return ret;
+  return Array.from({ length: end - start + 1 }, (_, i) => i + start);
 }
 
 /**
@@ -265,7 +264,7 @@ function distinct(arr) {
 function createNDimensionalArray(n, size) {
   if (n === 1) return new Array(size).fill(0);
 
-  return Array.from({length: size}, () =>
+  return Array.from({ length: size }, () =>
     createNDimensionalArray(n - 1, size)
   );
 }
@@ -360,7 +359,7 @@ function createChunks(arr, chunkSize) {
  *    generateOdds(5) => [ 1, 3, 5, 7, 9 ]
  */
 function generateOdds(len) {
-  return Array.from({length: len}, (_, ind) => ind * 2 + 1);
+  return Array.from({ length: len }, (_, ind) => ind * 2 + 1);
 }
 
 /**
@@ -418,8 +417,8 @@ function getFalsyValuesCount(arr) {
  *                              [0,0,0,0,1]]
  */
 function getIdentityMatrix(n) {
-  return Array.from({length: n}, (_, ind) =>
-    Array.from({length: n}, (__, ind2) => (ind === ind2 ? 1 : 0))
+  return Array.from({ length: n }, (_, ind) =>
+    Array.from({ length: n }, (__, ind2) => (ind === ind2 ? 1 : 0))
   );
 }
 
